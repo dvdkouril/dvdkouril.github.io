@@ -28,20 +28,23 @@
 }
 
 #container {
-	width: 400px;
+	width: 440px;
 	text-align: justify;
 	line-height: 1.3;
+	font-size: 110%;
 	}
 
 	h1 {
 	padding-bottom: 0;
 	margin-bottom: 0;
+	font-size: 2.2em;
 	}
 
 	h2 {
 	color: #aaaaaa;
 	padding-top: 0;
 	margin-top: 0;
+	font-size: 1.65em;
 	}
 	h2 > pre {
 	padding-top: 0;
