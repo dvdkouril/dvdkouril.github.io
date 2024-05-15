@@ -1,6 +1,6 @@
 <svelte:head>
 	<title>hdvcc</title>
-	<meta name="description" content="This is where the description goes for SEO" />
+	<meta name="description" content="like a book club, but with coding." />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true">
 	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
 	</p>
 
 <h2>meetings.</h2>
-<p><b>next</b>: Thursday May 15, 2024.</p>
+<p><b>next</b>: Thursday May 16, 2024.</p>
 
 
 <style>
