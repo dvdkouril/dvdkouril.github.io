@@ -20,7 +20,7 @@
 	Implementing <a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html">Ray Tracing in One Weekend</a> using <a href="http://ziglang.org">zig</a>.
 </p>
 <p>
-	repository: <a href="github.com">TODO</a>.
+	repository: <a href="www.github.com/dvdkouril">TODO</a>.
 	</p>
 
 <h2>meetings.</h2>
