@@ -32,7 +32,7 @@
 	font-family: "Dosis", sans-serif;
 }
 p, ul {
-	font-size: 1.1em;
+	font-size: 1.2em;
 }
 p {
 	margin-left: 20px;
