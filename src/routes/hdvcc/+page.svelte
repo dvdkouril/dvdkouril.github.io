@@ -7,24 +7,34 @@
 </svelte:head>
 
 <h1>hidive coding club.</h1>
-<ul>
-	<li>we meet every week for 1 hour.</li>
-	<li>we go through a coding book and implement the material.</li>
-	<li>we have a rotating schedule: one person from the group is typing, others are supporting.</li>
-	<li>each week’s work ends up as a pull request. all participants are tagged in the commit.</li>
-	<li>you should not do extra work outside of the club meeting.</li>
-</ul>
+<div id="container">
+	<ul>
+		<li>we meet every week for 1 hour.</li>
+		<li>we go through a coding book and implement the material.</li>
+		<li>we have a rotating schedule: one person from the group is typing, others are supporting.</li>
+		<li>each week’s work ends up as a pull request. all participants are tagged in the commit.</li>
+		<li>you should not do extra work outside of the club meeting.</li>
+	</ul>
 
-<h2>currently.</h2>
-<p>
-	Implementing <a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html">Ray Tracing in One Weekend</a> using <a href="http://ziglang.org">zig</a>.
-</p>
-<p>
-	repository: <a href="https://www.github.com/dvdkouril">TODO</a>.
+	<h2>currently.</h2>
+	<p>
+		Implementing <a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html">Ray Tracing in One Weekend</a> using <a href="http://ziglang.org">zig</a>.
 	</p>
+	<p>
+		repository: <a href="https://github.com/dvdkouril/hdvcc">github.com/dvdkouril/hdvcc</a>.
+		</p>
 
-<h2>meetings.</h2>
-<p><b>next</b>: Thursday May 16, 2024.</p>
+	<h2>meetings.</h2>
+	<h3>next</h3>
+	<p>Thursday May 23, 2024.</p>
+	<h3>past</h3>
+	<p><b>Thursday May 16, 2024.</b><br/>
+	<i>Video: <a href="https://youtu.be/GXSmvagvxbY">youtube.com/watch?v=GXSmvagvxbY</a></i><br/>
+	<i>Code: <a href="https://github.com/dvdkouril/hdvcc/pull/1">github.com/dvdkouril/hdvcc/pull/1</a></i><br/>
+	Setting up: downloading and installing zig, trying to fix david's zls in neovim, exploring file structure are zig init, figuring out how to write to standard output.
+	
+	</p>
+</div>
 
 
 <style>
@@ -34,6 +44,10 @@
 p, ul {
 	font-size: 1.2em;
 }
+#container {
+	width: 600px;
+	text-align: justify;
+	}
 p {
 	margin-left: 20px;
 }
