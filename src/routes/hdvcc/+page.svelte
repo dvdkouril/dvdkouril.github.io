@@ -1,3 +1,6 @@
+<script>
+	import week1thumb from '$lib/images/hdvcc/thumbnails/hdvcc-week1.png';
+</script>
 <svelte:head>
 	<title>hdvcc</title>
 	<meta name="description" content="like a book club, but with coding." />
@@ -32,7 +35,7 @@
 	<i>Video: <a href="https://youtu.be/GXSmvagvxbY">youtube.com/watch?v=GXSmvagvxbY</a></i><br/>
 	<i>Code: <a href="https://github.com/dvdkouril/hdvcc/pull/1">github.com/dvdkouril/hdvcc/pull/1</a></i><br/>
 	Setting up: downloading and installing zig, trying to fix david's zls in neovim, exploring file structure are zig init, figuring out how to write to standard output.
-	
+	<img class="thumb" width=600 src={week1thumb} alt="screenshot of two windows side-by-side, one is an online book and the other is a text editor"/>
 	</p>
 </div>
 
@@ -57,5 +60,8 @@ ul {
 li {
 	padding-left: 10px;
 	margin-bottom: 5px;
+}
+.thumb {
+	margin-top: 15px;
 }
 </style>
