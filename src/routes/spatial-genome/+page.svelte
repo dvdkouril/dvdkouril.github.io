@@ -50,7 +50,7 @@
 
 	<h2>Writing</h2>
 	<p>🚧 <a href="https://www.davidkouril.com/really-3d-genome/">Visualizing 3D genomic data</a>: overview of 3D genome modeling and visualization, intended as an introduction into the topic for data visualization researchers.</p>
-	<p>🚧 <a href="https://www.davidkouril.com/hyperwindows-paper/">Exploring Genomes in 3D Using a Non-uniform Physics-Based Layout</a>: paper primarily written about the hyperwindows method.</p>
+
 
 	<h2>Roadmap</h2>
 	<p>Yes, we will have a roadmap.</p>
