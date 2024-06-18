@@ -1,6 +1,11 @@
 <script>
 	import week1thumb from '$lib/images/hdvcc/thumbnails/hdvcc-week1.png';
 	import week2thumb from '$lib/images/hdvcc/thumbnails/hdvcc-week2.png';
+	import week3thumb from '$lib/images/hdvcc/thumbnails/hdvcc-week3.png';
+	// import week4thumb from '$lib/images/hdvcc/thumbnails/hdvcc-week3.png';
+	import week5thumb from '$lib/images/hdvcc/thumbnails/hdvcc-week5.png';
+
+	import MeetingThumbnail from '$lib/meeting-thumbnail.svelte';
 </script>
 <svelte:head>
 	<title>hdvcc</title>
@@ -30,21 +35,58 @@
 
 	<h2>meetings.</h2>
 	<h3>next</h3>
-	<p>Thursday May 30, 2024.</p>
+	<p>Thursday June 20, 2024.</p>
 	<h3>past</h3>
-	<p><b>Thursday May 23, 2024. Smith Campus Center (Cambridge, USA).</b><br/>
-	<i>Video: <a href="https://youtu.be/drVeUfKNJyo">youtube.com/watch?v=drVeUfKNJyo</a></i><br/>
-	<i>Code: <a href="https://github.com/dvdkouril/hdvcc/pull/2">github.com/dvdkouril/hdvcc/pull/2</a></i><br/>
-	Writing into a PPM file via a for loop; figuring out how to cast between integers and floats; sidetrack: commitlint message format; outputing progress into a debug output; implementing a three-dimensional vector structure; 
-	<img class="thumb" width=600 src={week2thumb} alt="screenshot of two windows side-by-side, one is an online book and the other is a text editor. there's also a circular webcam window in top right corner showing a young adult male wearing glasses."/>
-	</p>
 
-	<p><b>Thursday May 16, 2024. Countway Library (Boston, USA).</b><br/>
-	<i>Video: <a href="https://youtu.be/GXSmvagvxbY">youtube.com/watch?v=GXSmvagvxbY</a></i><br/>
-	<i>Code: <a href="https://github.com/dvdkouril/hdvcc/pull/1">github.com/dvdkouril/hdvcc/pull/1</a></i><br/>
-	Setting up: downloading and installing zig, trying to fix david's zls in neovim, exploring file structure are zig init, figuring out how to write to standard output.
-	<img class="thumb" width=600 src={week1thumb} alt="screenshot of two windows side-by-side, one is an online book and the other is a text editor"/>
-	</p>
+	<MeetingThumbnail
+		when="Thursday June 11, 2024"
+		where="Countway Library (Cambridge, USA)"
+		pr=5
+		youtubeLinkID="rrxMWeWI090"
+		description="Reviewing last week's PR; talking about type casting; Setting up the viewport for shooting rays into a scene; back-and-forth with zig's type casting; moving Vec3 to a separate file;"
+		image={week5thumb}
+		imageAltText="Screenshot of some code opened in the Zed editor."
+	/>
+
+	<MeetingThumbnail
+		when="Thursday June 6, 2024"
+		where="Countway Library (Cambridge, USA)"
+		pr=4
+		youtubeLinkID=""
+		description="Got interrupted by a building's evacuation."
+		image={undefined}
+		imageAltText="Screenshot of some code opened in the Zed editor."
+	/>
+
+	<MeetingThumbnail
+		when="Thursday May 30, 2024"
+		where="Countway Library (Cambridge, USA)"
+		pr=3
+		youtubeLinkID="QeORq793iUs"
+		description="Implementing Vec3 methods; writing simple tests for the Vec3 struct;"
+		image={week3thumb}
+		imageAltText="screenshot."
+	/>
+
+	<MeetingThumbnail
+		when="Thursday May 23, 2024"
+		where="Smith Campus Center (Cambridge, USA)"
+		pr=2
+		youtubeLinkID="drVeUfKNJyo"
+		description="Writing into a PPM file via a for loop; figuring out how to cast between integers and floats; sidetrack: commitlint message format; outputing progress into a debug output; implementing a three-dimensional vector structure;"
+		image={week2thumb}
+		imageAltText="screenshot of two windows side-by-side, one is an online book and the other is a text editor. there's also a circular webcam window in top right corner showing a young adult male wearing glasses."
+	/>
+
+	<MeetingThumbnail 
+		when="Thursday May 16, 2024"
+		where="Countway Library (Boston, USA)"
+		pr=1
+		youtubeLinkID="GXSmvagvxbY"
+		description="Setting up: downloading and installing zig, trying to fix david's zls in neovim, exploring file structure are zig init, figuring out how to write to standard output."
+		image={week1thumb}
+		imageAltText="screenshot of two windows side-by-side, one is an online book and the other is a text editor"
+	/>
 </div>
 
 
