@@ -1,3 +1,6 @@
+<script>
+	import teaser from '$lib/images/spatial-genome/teaser-tan2018-with-chunk.webp';
+</script>
 <svelte:head>
 	<title>3D genomics @ HIDIVE</title>
 	<meta name="description" content="Visualization of three-dimensional (3D) genomic data at the HIDIVE lab" />
@@ -8,6 +11,7 @@
 
 <div id="body-wrapper">
 	<h1>3D genomic data visualization @ HIDIVE lab</h1>
+	<img width=800 src={teaser} alt="Three examples of visualized chromatin structures: left: whole genome model, chromosomes have different colors; middle: same model with one chromosomes highlighted in orange, rest of the model is grayed out; right: smaller chromatin model with varying colors and sizes of each bin." />
 	<p>
 	We are a group of data visualization-focused researchers at the <a href="http://hidivelab.org">HIDIVE lab</a>. Our goal is to empower scientists working with complex data by making easy-to-use visualization tools. We primarily focus on data from biology and medicine.
 	</p>
