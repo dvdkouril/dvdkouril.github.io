@@ -1,5 +1,6 @@
 <script>
 	import teaser from "$lib/images/spatial-genome/teaser-tan2018-with-chunk.webp";
+	import hidiveLogo from "$lib/images/spatial-genome/hidive-white.png";
 </script>
 
 <svelte:head>
@@ -25,7 +26,8 @@
 	/>
 	<p>
 		We are a group of data visualization-focused researchers at the <a
-			href="http://hidivelab.org">HIDIVE lab</a
+			href="http://hidivelab.org"
+			><img src={hidiveLogo} class="hidive-logo" />HIDIVE lab</a
 		>. Our goal is to empower scientists working with complex data by making
 		easy-to-use visualization tools. We primarily focus on data from biology
 		and medicine.
@@ -251,5 +253,11 @@
 	#teaser-img {
 		width: 100%;
 		max-width: 800px;
+	}
+	.hidive-logo {
+		width: auto;
+		height: 0.9em;
+		vertical-align: baseline;
+		margin: 0 5px 0 0;
 	}
 </style>
