@@ -197,6 +197,22 @@
 	</p>
 
 	<p>
+		<b
+			>Solving the 'Too many active WebGL contexts' problem in
+			computational notebooks:</b
+		>
+		Using 3D visualization libraries in computational notebooks often reveals
+		an issue with the typical architecture of such tools, where a single canvas
+		element owns a WebGL context. In computational notebooks, such as Jupyter
+		Notebook/Lab, users might create many 3D views leading to having created
+		also many WebGL contexts. However, there are hard constraints on how many
+		WebGL contexts can there be on a webpage, e.g., Chromium allows at most 16
+		contexts. The goal of this topic is to develop a solution to this problem
+		in the context of the
+		<a href="https://github.com/dvdkouril/chromospace">chromospace</a>
+		library.
+	</p>
+	<p>
 		<b>High quality figure outputs with Blender:</b> The idea is to build a
 		3D chromatin visualization interactively using chromospace, using the
 		declarative specification, and then use Blender to produce a
