@@ -1,6 +1,15 @@
 <script>
 	import teaser from "$lib/images/spatial-genome/teaser-tan2018-with-chunk.webp";
 	import hidiveLogo from "$lib/images/spatial-genome/hidive-white.png";
+
+	const currentDateFormatted = () => {
+		const tdy = new Date();
+		return tdy.toLocaleDateString("en-US", {
+			year: "numeric",
+			month: "long",
+			day: "numeric",
+		});
+	};
 </script>
 
 <svelte:head>
@@ -131,13 +140,13 @@
 		>
 	</p>
 
-	<h2>Writing</h2>
-	<p>
-		🚧 <a href="https://www.davidkouril.com/really-3d-genome/"
-			>Visualizing 3D genomic data</a
-		>: overview of 3D genome modeling and visualization, intended as an
-		introduction into the topic for data visualization researchers.
-	</p>
+	<!-- <h2>Writing</h2> -->
+	<!-- <p> -->
+	<!-- 	🚧 <a href="https://www.davidkouril.com/really-3d-genome/" -->
+	<!-- 		>Visualizing 3D genomic data</a -->
+	<!-- 	>: overview of 3D genome modeling and visualization, intended as an -->
+	<!-- 	introduction into the topic for data visualization researchers. -->
+	<!-- </p> -->
 
 	<h2>Roadmap</h2>
 	<p>Yes, we will have a roadmap.</p>
@@ -220,6 +229,22 @@
 		leverage the ecosystem around glTF, for example
 		<a href="https://gltf-transform.dev">glTF Transform</a>.
 	</p>
+
+	<div class="legend-wrapper">
+		<span class="legend" style="font-size: 1em; line-height: 1.5;">
+			If interested, contact me at:
+			<strong
+				>david_<mark>&lbrace;$lastname&rbrace;</mark>@hms.<mark
+					>&lbrace;$university&rbrace;</mark
+				>.edu</strong
+			>,<br />
+			where: <strong><mark>&lbrace;$lastname&rbrace;</mark></strong> is my
+			last name without the accent, and
+			<strong><mark>&lbrace;$university&rbrace;</mark></strong> is the university
+			where I work.
+		</span>
+	</div>
+	<div id="footer">Last update: {currentDateFormatted()}</div>
 </div>
 
 <style>
@@ -275,5 +300,10 @@
 		height: 0.9em;
 		vertical-align: baseline;
 		margin: 0 5px 0 0;
+	}
+	#footer {
+		text-align: center;
+		padding: 20px;
+		color: gray;
 	}
 </style>
