@@ -110,35 +110,32 @@
 	<p></p>
 
 	<h2>Software</h2>
-	<div class="legend-wrapper">
-		<span class="legend">
-			🚧 = still heavily work in progress. ⌨️ = still developed, but
-			should be usable. ✅ = (mostly) finished!<br />
-		</span>
-	</div>
-	<p>
-		🚧 <b>chromospace</b>: javascript library for visualization of 3D
-		chromatin structures<br />
-		<span class="sw-links"
-			><a href="https://github.com/dvdkouril/chromospace">github</a> |
-			<a
-				href="https://observablehq.com/@david-kouril/chromospace-playground"
-				>observablehq example</a
+	<ul>
+		<li>
+			<b>chromospace</b>: javascript library for visualization of 3D
+			chromatin structures<br />
+			<span class="sw-links"
+				><a href="https://github.com/dvdkouril/chromospace">github</a> |
+				<a
+					href="https://observablehq.com/@david-kouril/chromospace-playground"
+					>observablehq example</a
+				>
+				|
+				<a href="https://jsr.io/@chromospace/chromospace">jsr</a></span
 			>
-			| <a href="https://jsr.io/@chromospace/chromospace">jsr</a></span
-		>
-	</p>
-	<p>
-		🚧 <b>chromospyce</b>: anywidget-powered computational notebook version
-		of chromospace
-		<span class="sw-links"
-			><a href="https://github.com/dvdkouril/chromospyce">github</a> |
-			<a
-				href="https://colab.research.google.com/drive/1E-jDzM1hs-TtTg_XJnEuDn6RU2VG0Lxe?usp=sharing"
-				>google colab example</a
-			></span
-		>
-	</p>
+		</li>
+		<li>
+			<b>chromospyce</b>: anywidget-powered computational notebook version
+			of chromospace
+			<span class="sw-links"
+				><a href="https://github.com/dvdkouril/chromospyce">github</a> |
+				<a
+					href="https://colab.research.google.com/drive/1E-jDzM1hs-TtTg_XJnEuDn6RU2VG0Lxe?usp=sharing"
+					>google colab example</a
+				></span
+			>
+		</li>
+	</ul>
 
 	<!-- <h2>Writing</h2> -->
 	<!-- <p> -->
