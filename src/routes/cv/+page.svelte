@@ -206,11 +206,6 @@
 				height: 250,
 				x: { label: null },
 				y: { tickFormat: "s", tickSpacing: 50 },
-				// color: {
-				// 	scheme: "Spectral",
-				// 	legend: "ramp",
-				// 	label: "Venues",
-				// },
 				color: {
 					legend: true,
 					scheme: "Spectral",
@@ -220,7 +215,7 @@
 						reviewsData,
 						Plot.groupX(
 							{ y: "count" },
-							{ x: "date", fill: "venue" },
+							{ x: "date", fill: "venue", stroke: "red" },
 						),
 					),
 				],
