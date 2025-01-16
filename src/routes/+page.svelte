@@ -14,7 +14,7 @@
 
 	<p>I work in data visualization research, specializing on biological data. At HIDIVE, I develop tools for visualization of 3D chromatin structure predictions as a complement for the typical chromosome conformation capture techniques used for determining spatial organization of genomes.</p>
 
-	<p>Currently, I'm making a Javascript <a href="https://observablehq.com/@david-kouril/chromospace-playground">library for 3D chromatin visualization</a>. We're also preparing a widget version intended for use in <a href="https://colab.research.google.com/drive/1E-jDzM1hs-TtTg_XJnEuDn6RU2VG0Lxe?usp=sharing">computational notebooks</a>.</p>
+	<p>Currently, I'm making a Javascript <a href="https://observablehq.com/@david-kouril/chromospace-playground">library for 3D chromatin visualization</a>. We're also preparing a widget version intended for use in <a href="https://github.com/dvdkouril/chromospyce">computational notebooks</a>.</p>
 
 	<p>I received a doctoral degree from <a href="https://www.tuwien.at/en/">TU Wien</a>. My thesis <em>Interactive Visualization of Dense and Multi-Scale Data for Science Outreach</em> was awarded the <a href="https://www.eg.org/wp/eurographics-awards-programme/eurovis-phd-award/">EuroVis PhD Award in 2022</a>.</p>
 
