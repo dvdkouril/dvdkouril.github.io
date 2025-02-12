@@ -11,7 +11,7 @@
 		year: number;
 	};
 
-	type Tags = "hidive" | "personal";
+	type Tags = "hidive" | "personal" | "visitlab";
 
 	const stuff: Item[] = [
 		{
@@ -95,8 +95,39 @@
 			tags: ["hidive"],
 			year: 2024,
 		},
+		{
+			title: "hierarchical selections in a 3D chromatin model",
+			links: [
+				{
+					link: "https://dvdkouril.github.io/hierarchical-selections/",
+					name: "app",
+				},
+				{
+					link: "https://github.com/dvdkouril/hierarchical-selections",
+					name: "code",
+				},
+			],
+			tags: ["visitlab"],
+			year: 2023,
+		},
+		{
+			title: "hyperwindows prototype",
+			links: [
+				{
+					link: "https://dvdkouril.github.io/chromatin-n-out/",
+					name: "app",
+				},
+				{
+					link: "https://github.com/dvdkouril/chromatin-n-out",
+					name: "code",
+				},
+			],
+			tags: ["visitlab", "hidive"],
+			year: 2023,
+		},
 	];
 
+	const stuff2023 = stuff.filter((i) => i.year === 2023);
 	const stuff2024 = stuff.filter((i) => i.year === 2024);
 	const stuff2025 = stuff.filter((i) => i.year === 2025);
 </script>
@@ -114,3 +145,5 @@
 <StuffList stuff={stuff2025} />
 <h2>2024</h2>
 <StuffList stuff={stuff2024} />
+<h2>2023</h2>
+<StuffList stuff={stuff2023} />
