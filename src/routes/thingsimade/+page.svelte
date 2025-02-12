@@ -1,4 +1,6 @@
 <script lang="ts">
+	import StuffList from "./StuffList.svelte";
+
 	type Item = {
 		title: string;
 		links: {
@@ -62,7 +64,12 @@
 		},
 		{
 			title: "anywidget setup: developing both the library and the widget",
-			links: [{ link: "", name: "video" }],
+			links: [
+				{
+					link: "https://www.youtube.com/watch?v=yL1k2IUA1ps",
+					name: "video",
+				},
+			],
 			tags: ["hidive"],
 			year: 2025,
 		},
@@ -101,28 +108,6 @@
 </p>
 <p>personal stuff omitted.</p>
 <h2>2025</h2>
-<ul>
-	{#each stuff2025 as thing}
-		<li>
-			[{#each thing.links as link}
-				<a href={link.link}>{link.name}</a>
-			{/each}] {thing.title}
-			{#each thing.tags as tag}
-				<span style="border: 1px solid black;">{tag}</span>
-			{/each}
-		</li>
-	{/each}
-</ul>
+<StuffList stuff={stuff2025} />
 <h2>2024</h2>
-<ul>
-	{#each stuff2024 as thing}
-		<li>
-			[{#each thing.links as link}
-				<a href={link.link}>{link.name}</a>
-			{/each}] {thing.title}
-			{#each thing.tags as tag}
-				<span style="border: 1px solid black;">{tag}</span>
-			{/each}
-		</li>
-	{/each}
-</ul>
+<StuffList stuff={stuff2024} />
