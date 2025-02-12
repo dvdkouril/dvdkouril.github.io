@@ -81,7 +81,7 @@
 					name: "code",
 				},
 			],
-			tags: ["hidive"],
+			tags: ["personal"],
 			year: 2024,
 		},
 		{
@@ -103,10 +103,13 @@
 
 <h1>small things i've made</h1>
 <p>
-	a list of small (or big) things i've created. no rules, mostly stuff i'm
-	just proud of.
+	<b>i love making stuff.</b> this is a list of small (or big) things i've created
+	recently.
 </p>
-<p>personal stuff omitted.</p>
+<p>
+	mostly things that were not my main work projects. some personal stuff
+	omitted.
+</p>
 <h2>2025</h2>
 <StuffList stuff={stuff2025} />
 <h2>2024</h2>
