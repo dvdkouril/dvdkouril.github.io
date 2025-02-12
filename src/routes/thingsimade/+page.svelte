@@ -107,8 +107,8 @@
 	recently.
 </p>
 <p>
-	mostly things that were not my main work projects. some personal stuff
-	omitted.
+	mostly things that were not my main work projects, but i'm still proud of.
+	some personal stuff omitted.
 </p>
 <h2>2025</h2>
 <StuffList stuff={stuff2025} />
