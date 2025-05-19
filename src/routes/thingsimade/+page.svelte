@@ -74,6 +74,17 @@
 			year: 2025,
 		},
 		{
+			title: "3D pie chart from Secret Base video",
+			links: [
+				{
+					link: "https://observablehq.com/d/a6e42e6b6fdfae1b",
+					name: "observable",
+				},
+			],
+			tags: ["personal"],
+			year: 2025,
+		},
+		{
 			title: "visualnination: visualization of nina's sleep",
 			links: [
 				{
