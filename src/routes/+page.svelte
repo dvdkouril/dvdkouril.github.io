@@ -26,14 +26,27 @@
 		in Nils Gehlenborg's <a href="http://hidivelab.org">HIDIVE Lab</a>.
 	</p>
 
+	<div id="job-search">
+		<p>
+			I'm searching for my next research role: <br />
+			<a href="#">My CV</a> | contact: david.kouril@gmail.com. <br />
+			I open
+		</p>
+	</div>
+
 	<p>
-		I work in data visualization research, specializing on biological data.
-		At HIDIVE, I develop tools for visualization of 3D chromatin structure
-		predictions as a complement for the typical chromosome conformation
-		capture techniques used for determining spatial organization of genomes.
+		My research work centers around data visualization, with a special focus
+		on data with a spatial component. I have worked at the border of
+		disciplines, interacting with biologists. I work in data visualization
+		research, specializing on biological data. My interests and previous
+		work: data visualization, data with a spatial component, interaction and
+		navigation, sense-making, science communication.
 	</p>
 
 	<p>
+		At HIDIVE, I develop tools for visualization of 3D chromatin structure
+		predictions as a complement for the typical chromosome conformation
+		capture techniques used for determining spatial organization of genomes.
 		Currently, I'm making a Javascript <a
 			href="https://observablehq.com/@david-kouril/chromospace-playground"
 			>library for 3D chromatin visualization</a
@@ -55,7 +68,7 @@
 		<a
 			href="https://www.eg.org/wp/eurographics-awards-programme/eurovis-phd-award/"
 			>EuroVis PhD Award in 2022</a
-		>.
+		>. I received best paper honorable mention from IEEE VIS 2018
 	</p>
 
 	<p>
@@ -143,5 +156,20 @@
 	.socials-logo:hover {
 		background-color: transparent;
 		text-decoration: none;
+		color: white;
+		font-size: 90%;
+		background-color: red;
+		padding: 0px 5px 0px 5px;
+		margin-top: 5px;
+		text-decoration: none;
+	}
+	#job-search {
+		text-align: center;
+	}
+	#job-search p {
+		display: inline-block;
+		text-align: center;
+		border: 2px solid black;
+		padding: 10px 8px 10px 8px;
 	}
 </style>
