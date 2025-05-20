@@ -224,9 +224,225 @@
 	}
 </script>
 
-<h1>cv.</h1>
-<p>experience</p>
+<svelte:head>
+	<title>cv.</title>
+	<!--<meta
+		name="description"
+		content="This is where the description goes for SEO"
+	/>-->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap"
+		rel="stylesheet"
+	/>
+</svelte:head>
 
-<h2>community service</h2>
-<h3>reviewing</h3>
-<div on:mousemove={onMousemove} bind:this={div} role="img"></div>
+<div id="container">
+	<h2>basic information.</h2>
+	<div style="margin-left: 40px">
+		<p>Full name: Dr.techn. Mgr. David Kouril.</p>
+		<p>Nationality: Czech.</p>
+
+		<p>Links: bsky, github, observable.</p>
+	</div>
+
+	<h2>education.</h2>
+	<ul>
+		<li class="cv-item">
+			<div class="date-column">Mar 2017 - Apr 2021:</div>
+			<div class="item-details">
+				<strong>Doctoral Degree (Dr.techn.)</strong> @ TU Wien (AT)
+				<br />
+				Thesis:
+				<i
+					>“Interactive Visualization of Dense and Multi-Scale Data
+					for Science Outreach”</i
+				>
+			</div>
+		</li>
+		<li class="cv-item">
+			<div class="date-column">Sep 2014 - Feb 2017:</div>
+			<div class="item-details">
+				<strong>Master's Degree (Mgr.)</strong> @ Masaryk University
+				(CZ)
+				<br />
+				Field: Computer Graphics, Thesis:
+				<i
+					>"Maya2CellVIEW: Integrated Tool for Creating Large and
+					Complex Molecular Scenes"</i
+				>
+			</div>
+		</li>
+		<li class="cv-item">
+			<div class="date-column">Sep 2011 - Jun 2014:</div>
+			<div class="item-details">
+				<strong>Bachelor's Degree (Bc.)</strong> @ Masaryk University
+				(CZ)
+				<br />
+				Field: Computer Graphics and Image Processing, Thesis:
+				<i>"Fast region labeling of binary images"</i>
+			</div>
+		</li>
+	</ul>
+
+	<h2>awards.</h2>
+	<ul class="basic-list">
+		<li>
+			<a
+				href="https://ieeevis.org/year/2018/info/awards/best-paper-awards#scivis"
+				>IEEE Vis 2018 Best Paper Honorable Mention (SciVis)</a
+			>
+		</li>
+		<li>
+			<a
+				href="https://www.eg.org/wp/eurographics-awards-programme/eurovis-phd-award/"
+				>EuroVis Best PhD Award 2022</a
+			>
+		</li>
+	</ul>
+
+	<h2>research experience.</h2>
+	<ul>
+		<li class="cv-item">
+			<div class="date-column">Jul 2023 - Jun 2025:</div>
+			<div class="item-details">
+				<strong>Postdoctoral Research Fellow</strong> @ Harvard Medical School
+				(USA)
+			</div>
+		</li>
+		<li class="cv-item">
+			<div class="date-column">Jul 2021 - Jun 2023:</div>
+			<div class="item-details">
+				<strong>Postdoctoral Researcher</strong> @ Masaryk University
+				(CZ)
+
+				<ul>
+					<li>
+						Leading role in a project dealing with visualization of
+						three-dimensional chromatin models
+					</li>
+					<li>
+						Advising doctoral students at the visualization group
+						VisitLab
+					</li>
+					<li>
+						Contributed to writing project proposal submitted to
+						GAČR (Czech Science Foundation), funded in December 2022
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="cv-item">
+			<div class="date-column">Mar 2017 - Feb 2021:</div>
+			<div class="item-details">
+				<strong>Project Assistant</strong> @ TU Wien (AT)
+
+				<ul>
+					<li>
+						Main researcher for 3 research projects Labels on
+						Levels: labeling for molecular scenes HyperLabels:
+						multi-scale navigation Molecumentary: virtual tours of
+						molecular models
+					</li>
+					<li>
+						Provided support to students and external collaborators
+						with the Marion library
+					</li>
+					<li>
+						Collaborated with international experts from both
+						visualization and biology domain
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="cv-item">
+			<div class="date-column">Jul 2016 - Feb 2017:</div>
+			<div class="item-details">
+				<strong>Project Assistant Without Degree</strong> @ TU Wien
+				<ul>
+					<li>
+						Integrated several research prototypes into a unified
+						demo which was then submitted to the VIZZIES challenge
+						(organized by National Science Foundation)
+					</li>
+					<li>
+						Ported a high-performance molecular rendering technique
+						(cellVIEW) from DirectX to OpenGL for a new proprietary
+						library (called Marion)
+					</li>
+					<li>
+						This code was later used in commercialization of the
+						Marion library by a spin-off company Nanographics GmbH
+					</li>
+					<li>
+						Implemented nano-scale rendering of microtubules for a
+						project contracted by Allen Institute For Cell Science
+					</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+
+	<h2>professional service.</h2>
+	<h3>reviewing</h3>
+	<div
+		id="review-summary-vis"
+		on:mousemove={onMousemove}
+		bind:this={div}
+		role="img"
+	></div>
+
+	<h3>other</h3>
+	<ul class="basic-list">
+		<li>EuroVis 2018: Fast Forward Chair, Student Volunteer</li>
+		<li>PacificVis 2025: Program Committee</li>
+		<li>IEEE VIS 2025: Program Committee</li>
+	</ul>
+
+	<h2>talks.</h2>
+	<h2>teaching.</h2>
+	<h2>publications.</h2>
+	<p>
+		See <a href="/publications">/publications</a> or
+		<a href="#">Google Scholar</a>.
+	</p>
+</div>
+
+<style>
+	* {
+		font-family: "Dosis", sans-serif;
+	}
+
+	/*h2 {*/
+	/*	margin-top: 0;*/
+	/*}*/
+
+	#container {
+		width: 800px;
+	}
+
+	#review-summary-vis {
+		width: 600px;
+	}
+
+	.cv-item {
+		/*background-color: red;*/
+		margin: 10px 0 10px 0;
+		display: flex;
+		gap: 1rem;
+	}
+	.date-column {
+		/*background-color: red;*/
+		flex: 1;
+	}
+	.item-details {
+		flex: 4;
+	}
+	.basic-list {
+		list-style-type: none;
+	}
+	.basic-list li {
+		margin: 10px 0 10px 0;
+	}
+</style>
