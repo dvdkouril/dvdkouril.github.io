@@ -293,7 +293,8 @@
 	/*}*/
 
 	#container {
-		width: 800px;
+		width: 100%;
+		max-width: 800px;
 		font-size: 110%;
 	}
 
