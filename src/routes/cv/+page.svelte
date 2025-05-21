@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Publications from "$lib/components/publications.svelte";
 	import * as Plot from "@observablehq/plot";
 	import * as d3 from "d3";
 
@@ -439,10 +440,8 @@
 		<li>
 			<i>Navigating and Exploring 3D Biological Environments</i> (invited
 			talk) @
-			<strong
-				>Visualization II course, Masaryk University, Brno (CZ), April
-				2020 (given remotely).
-			</strong>
+			<strong>Visualization II course</strong>, Masaryk University, Brno
+			(CZ), April 2020 (given remotely).
 		</li>
 		<li>
 			<i>Navigating and Exploring 3D Biological Environments</i> @
@@ -473,12 +472,9 @@
 	</ul>
 	<!--<h2>teaching.</h2>-->
 	<h2>publications.</h2>
-	<p>
-		See <a href="/publications">/publications</a> or
-		<a href="https://scholar.google.com/citations?user=dZxZ__wAAAAJ&hl=en"
-			>Google Scholar</a
-		>.
-	</p>
+	<div style="margin-left: 40px">
+		<Publications />
+	</div>
 </div>
 
 <style>
@@ -497,6 +493,10 @@
 
 	#review-summary-vis {
 		width: 600px;
+	}
+
+	h3 {
+		margin-left: 40px;
 	}
 
 	.cv-item {
