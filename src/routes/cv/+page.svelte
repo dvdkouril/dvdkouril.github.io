@@ -241,10 +241,18 @@
 <div id="container">
 	<h2>basic information.</h2>
 	<div style="margin-left: 40px">
-		<p>Full name: Dr.techn. Mgr. David Kouřil.</p>
-		<p>Nationality: Czech.</p>
+		<p>Full name: <strong>Dr.techn. Mgr. David Kouřil</strong>.</p>
+		<p>Nationality: <strong>Czech</strong>.</p>
 
-		<p>Links: bsky, github, observable.</p>
+		<p>
+			Links: <a href="https://bsky.app/profile/dvdkouril.xyz">bsky</a>,
+			<a href="https://github.com/dvdkouril">github</a>,
+			<a href="https://observablehq.com/@david-kouril">observable</a>,
+			<a
+				href="https://scholar.google.com/citations?user=dZxZ__wAAAAJ&hl=en"
+				>scholar</a
+			>.
+		</p>
 	</div>
 
 	<h2>education.</h2>
@@ -395,8 +403,18 @@
 	<h3>other.</h3>
 	<ul class="basic-list">
 		<li>EuroVis 2018: Fast Forward Chair, Student Volunteer</li>
-		<li>PacificVis 2025: Program Committee</li>
-		<li>IEEE VIS 2025: Program Committee</li>
+		<li>
+			PacificVis 2025: <a
+				href="https://pacificvis2025.github.io/pages/Committees.html"
+				>Journal Track Program Committee</a
+			>
+		</li>
+		<li>
+			IEEE VIS 2025: <a
+				href="https://ieeevis.org/year/2025/info/committees/program-committees"
+				>Full Papers Program Committee</a
+			>
+		</li>
 	</ul>
 
 	<h2>talks.</h2>
@@ -453,11 +471,13 @@
 			(CZ), November 2017.
 		</li>
 	</ul>
-	<h2>teaching.</h2>
+	<!--<h2>teaching.</h2>-->
 	<h2>publications.</h2>
 	<p>
 		See <a href="/publications">/publications</a> or
-		<a href="#">Google Scholar</a>.
+		<a href="https://scholar.google.com/citations?user=dZxZ__wAAAAJ&hl=en"
+			>Google Scholar</a
+		>.
 	</p>
 </div>
 

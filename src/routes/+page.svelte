@@ -1,3 +1,9 @@
+<script lang="ts">
+	import blueskyLogo from "$lib/logos/bluesky.svg";
+	import githubLogo from "$lib/logos/github.svg";
+	import observableLogo from "$lib/logos/observable.svg";
+</script>
+
 <svelte:head>
 	<title>Hello world!</title>
 	<meta
@@ -60,9 +66,17 @@
 		years.
 	</p>
 	<div id="links">
-		<a href="https://bsky.app/profile/dvdkouril.xyz">bsky</a> |
-		<a href="https://github.com/dvdkouril">github</a> |
-		<a href="https://observablehq.com/@david-kouril">observable</a>
+		<a class="socials-logo" href="https://bsky.app/profile/dvdkouril.xyz"
+			><img alt="bluesky logo" src={blueskyLogo} /></a
+		>
+		|
+		<a class="socials-logo" href="https://github.com/dvdkouril"
+			><img alt="github logo" src={githubLogo} /></a
+		>
+		|
+		<a class="socials-logo" href="https://observablehq.com/@david-kouril"
+			><img alt="observablehq logo" src={observableLogo} /></a
+		>
 	</div>
 </div>
 
@@ -105,5 +119,15 @@
 	}
 	#links {
 		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 5px;
+	}
+	.socials-logo img {
+		height: 25px;
+	}
+	.socials-logo {
+		background-color: transparent;
 	}
 </style>

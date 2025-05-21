@@ -17,9 +17,11 @@
 	<div style="width: 3px; height: 80px; background-color: #aaaaaa;"></div>
 	<nav id="menu">
 		<ul>
-			<li><a href="/" class:selected={currentPath === "/"}>home.</a></li>
 			<li>
-				<a href="/cv" class:selected={currentPath === "/cv"}>cv.</a>
+				> <a href="/" class:selected={currentPath === "/"}>home.</a>
+			</li>
+			<li>
+				> <a href="/cv" class:selected={currentPath === "/cv"}>cv.</a>
 			</li>
 			<!--<li>
 				<a href="/projects" class:selected={currentPath === "/projects"}
@@ -71,5 +73,11 @@
 
 	#menu ul li {
 		margin: 0;
+	}
+
+	#menu a {
+		/*background-color: #aaaaaa;*/
+		/*color: black;*/
+		/*text-decoration: none;*/
 	}
 </style>
