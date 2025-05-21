@@ -110,13 +110,23 @@
 	}
 
 	a {
-		color: white;
+		color: black;
 		font-size: 90%;
-		background-color: red;
+		/*background-color: red;*/
 		padding: 0px 5px 0px 5px;
 		margin-top: 5px;
-		text-decoration: none;
+		text-decoration: underline;
+		text-decoration-thickness: 5px;
 	}
+
+	a:hover {
+		background-color: red;
+		text-decoration: underline;
+		text-decoration-thickness: 5px;
+		text-decoration-color: blue;
+		color: white;
+	}
+
 	#links {
 		text-align: center;
 		display: flex;
@@ -129,5 +139,9 @@
 	}
 	.socials-logo {
 		background-color: transparent;
+	}
+	.socials-logo:hover {
+		background-color: transparent;
+		text-decoration: none;
 	}
 </style>

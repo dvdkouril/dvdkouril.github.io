@@ -14,7 +14,7 @@
 		<h1>DAVID KOUŘIL.</h1>
 		<h2><pre>David Kou\v{"{"}r{"}"}il</pre></h2>
 	</div>
-	<div style="width: 3px; height: 80px; background-color: #aaaaaa;"></div>
+	<div style="width: 2px; height: 80px; background-color: #000;"></div>
 	<nav id="menu">
 		<ul>
 			<li>
