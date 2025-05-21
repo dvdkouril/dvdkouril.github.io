@@ -21,11 +21,11 @@
 			<li>
 				<a href="/cv" class:selected={currentPath === "/cv"}>cv.</a>
 			</li>
-			<li>
+			<!--<li>
 				<a href="/projects" class:selected={currentPath === "/projects"}
 					>projects.</a
 				>
-			</li>
+			</li>-->
 		</ul>
 	</nav>
 </div>
