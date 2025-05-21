@@ -39,7 +39,7 @@
 		<li class="cv-item">
 			<div class="date-column">Mar 2017 - Apr 2021:</div>
 			<div class="item-details">
-				<strong>Doctoral Degree (Dr.techn.)</strong> @ TU Wien (AT)
+				<strong>Doctoral Degree (Dr.techn.)</strong> @ TU Wien (AT) 🇦🇹
 				<br />
 				Thesis:
 				<i
@@ -52,7 +52,7 @@
 			<div class="date-column">Sep 2014 - Feb 2017:</div>
 			<div class="item-details">
 				<strong>Master's Degree (Mgr.)</strong> @ Masaryk University
-				(CZ)
+				(CZ) 🇨🇿
 				<br />
 				Field: Computer Graphics, Thesis:
 				<i
@@ -65,7 +65,7 @@
 			<div class="date-column">Sep 2011 - Jun 2014:</div>
 			<div class="item-details">
 				<strong>Bachelor's Degree (Bc.)</strong> @ Masaryk University
-				(CZ)
+				(CZ) 🇨🇿
 				<br />
 				Field: Computer Graphics and Image Processing, Thesis:
 				<i>"Fast region labeling of binary images"</i>
@@ -76,10 +76,21 @@
 	<h2>research experience.</h2>
 	<ul>
 		<li class="cv-item">
-			<div class="date-column">Jul 2023 - Jun 2025:</div>
+			<div class="date-column">Jul 2023 - present:</div>
 			<div class="item-details">
-				<strong>Postdoctoral Research Fellow</strong> @ Harvard Medical School
-				(USA) 🇺🇸
+				<strong>Postdoctoral Research Fellow</strong> @ Harvard Medical
+				School (USA) 🇺🇸
+
+				<ul>
+					<li>
+						Investigating visualization of 3D genome models in the
+						context of visualization grammars.
+					</li>
+					<li>
+						Developed novel domain-specific software tools for both
+						web and computational notebooks.
+					</li>
+				</ul>
 			</div>
 		</li>
 		<li class="cv-item">
@@ -195,6 +206,34 @@
 	<ul class="basic-list">
 		<li>
 			<i
+				>The story of visualizing 3D genome data as a path toward
+				composable visualization tools</i
+			>
+			(invited talk) @
+			<strong>Konversatorium</strong>, TU Wien (AT), May 2025.
+		</li>
+		<li>
+			<i
+				>You’ve Visualized It but Now What? Navigating and Making Sense
+				of Large 3D Visualizations</i
+			>
+			(invited talk) @
+			<strong>CNS Research Showcase</strong>, Indiana University (US),
+			January 2023 (given remotely).
+		</li>
+		<li>
+			<i
+				>Navigating and Making Sense of Large 3D Visualizations of
+				Biological Data</i
+			>
+			(invited talk) @
+			<strong>ISCBacademy Webinar, hosted by BioVis</strong>, online,
+			March 2023.
+			<a href="https://www.youtube.com/watch?v=rThqgeu09ZE">[recording]</a
+			>
+		</li>
+		<li>
+			<i
 				>You’ve Visualized It but Now What? Navigating and Making Sense
 				of Large 3D Visualizations</i
 			>
@@ -209,12 +248,6 @@
 			(conference paper presentation) @ <strong>IEEE Vis 2020</strong>,
 			Salt Lake City (USA), October 2020 (given remotely).
 			<a href="https://youtu.be/GVfO0F-4T7g?t=630">[recording]</a>
-		</li>
-		<li>
-			<i>Navigating and Exploring 3D Biological Environments</i> (invited
-			talk) @
-			<strong>Visualization II course</strong>, Masaryk University, Brno
-			(CZ), April 2020 (given remotely).
 		</li>
 		<li>
 			<i>Navigating and Exploring 3D Biological Environments</i> @
