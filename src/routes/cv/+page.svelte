@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Publications from "$lib/components/publications.svelte";
 	import Reviewingplot from "$lib/components/reviewingplot.svelte";
-	import Reviewingplot2 from "$lib/components/reviewingplot2.svelte";
 </script>
 
 <svelte:head>
@@ -174,7 +173,6 @@
 	<h2>professional service.</h2>
 	<h3>reviewing.</h3>
 	<Reviewingplot />
-	<Reviewingplot2 />
 
 	<h3>other.</h3>
 	<ul class="basic-list">
