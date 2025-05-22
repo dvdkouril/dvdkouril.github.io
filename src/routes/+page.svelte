@@ -19,6 +19,13 @@
 </svelte:head>
 
 <div id="container">
+	<div id="job-search">
+		<p>
+			I'm searching for my next research role: <br />
+			<a href="/cv">CV</a> <br />
+		</p>
+	</div>
+
 	<p>
 		Hi, I'm currently a postdoc at <a href="http://hms.harvard.edu"
 			>Harvard Medical School</a
@@ -26,31 +33,23 @@
 		in Nils Gehlenborg's <a href="http://hidivelab.org">HIDIVE Lab</a>.
 	</p>
 
-	<div id="job-search">
-		<p>
-			I'm searching for my next research role: <br />
-			<a href="#">My CV</a> | contact: david.kouril@gmail.com. <br />
-			I open
-		</p>
-	</div>
-
 	<p>
 		My research work centers around data visualization, with a special focus
-		on data with a spatial component. I have worked at the border of
-		disciplines, interacting with biologists. I work in data visualization
-		research, specializing on biological data. My interests and previous
-		work: data visualization, data with a spatial component, interaction and
-		navigation, sense-making, science communication.
+		on data with spatial components. I work at the intersection of
+		disciplines, bridging software development, computer graphics, and
+		biology. I'm especially interested in developing new interaction
+		techniques that make complex or unfamiliar type of data more intuitive
+		to grasp and explore.
 	</p>
 
 	<p>
-		At HIDIVE, I develop tools for visualization of 3D chromatin structure
+		At HIDIVE, I investigate visualization of 3D chromatin structure
 		predictions as a complement for the typical chromosome conformation
 		capture techniques used for determining spatial organization of genomes.
-		Currently, I'm making a Javascript <a
+		This involves developing <a
 			href="https://observablehq.com/@david-kouril/chromospace-playground"
-			>library for 3D chromatin visualization</a
-		>. We're also preparing a widget version intended for use in
+			>new web-based visualization software</a
+		>, as well as an interface for
 		<a href="https://github.com/dvdkouril/chromospyce"
 			>computational notebooks</a
 		>.
@@ -68,7 +67,7 @@
 		<a
 			href="https://www.eg.org/wp/eurographics-awards-programme/eurovis-phd-award/"
 			>EuroVis PhD Award in 2022</a
-		>. I received best paper honorable mention from IEEE VIS 2018
+		>.
 	</p>
 
 	<p>
@@ -99,7 +98,8 @@
 	}
 
 	#container {
-		width: 440px;
+		width: 100%;
+		max-width: 440px;
 		text-align: justify;
 		line-height: 1.3;
 		font-size: 110%;
@@ -158,7 +158,6 @@
 		text-decoration: none;
 		color: white;
 		font-size: 90%;
-		background-color: red;
 		padding: 0px 5px 0px 5px;
 		margin-top: 5px;
 		text-decoration: none;
