@@ -1,36 +1,40 @@
 <script lang="ts">
-	//import { page } from '$app/stores';
+	import { page } from "$app/state";
 	let { children } = $props();
 
+	const pageUrl = $derived(page.url.pathname);
+	const showHeader = $derived(pageUrl === "/" || pageUrl === "/cv");
 	//const showHeaderFor = ["/", "cv"];
-	//const showHeader = derived(page, ($page) => {
-	//	$page.url.
-	//});
-	const currentPath: string = "/";
 </script>
 
-<div id="header">
-	<div id="name-title">
-		<h1>DAVID KOUŘIL.</h1>
-		<h2><pre>David Kou\v{"{"}r{"}"}il</pre></h2>
-	</div>
-	<div style="width: 2px; height: 80px; background-color: #000;"></div>
-	<nav id="menu">
-		<ul>
-			<li>
-				> <a href="/" class:selected={currentPath === "/"}>home.</a>
-			</li>
-			<li>
-				> <a href="/cv" class:selected={currentPath === "/cv"}>cv.</a>
-			</li>
-			<!--<li>
+{#if showHeader}
+	<div id="header">
+		<div id="name-title">
+			<h1>DAVID KOUŘIL.</h1>
+			<h2><pre>David Kou\v{"{"}r{"}"}il</pre></h2>
+		</div>
+		<div style="width: 2px; height: 80px; background-color: #000;"></div>
+		<nav id="menu">
+			<ul>
+				<li>
+					>
+					<a href="/">home.</a>
+					<!--<a href="/" class:selected={currentPath === "/"}>home.</a>-->
+				</li>
+				<li>
+					>
+					<a href="/cv">cv.</a>
+					<!--> <a href="/cv" class:selected={currentPath === "/cv"}>cv.</a>-->
+				</li>
+				<!--<li>
 				<a href="/projects" class:selected={currentPath === "/projects"}
 					>projects.</a
 				>
 			</li>-->
-		</ul>
-	</nav>
-</div>
+			</ul>
+		</nav>
+	</div>
+{/if}
 {@render children()}
 
 <style>
