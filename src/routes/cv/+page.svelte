@@ -22,6 +22,13 @@
 	<div style="margin-left: 40px">
 		<p>Full name: <strong>Dr.techn. Mgr. David Kouřil</strong>.</p>
 		<p>Nationality: <strong>Czech</strong>.</p>
+		<p>
+			Contact: <strong
+				><mark>$&lbrace;firstname&rbrace;</mark>.<mark
+					>$&lbrace;lastname-without-accent&rbrace;</mark
+				>@gmail.com</strong
+			>
+		</p>
 
 		<p>
 			Links: <a href="https://bsky.app/profile/dvdkouril.xyz">bsky</a>,

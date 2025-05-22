@@ -19,6 +19,13 @@
 </svelte:head>
 
 <div id="container">
+	<div id="job-search">
+		<p>
+			I'm searching for my next research role: <br />
+			<a href="/cv">CV</a> <br />
+		</p>
+	</div>
+
 	<p>
 		Hi, I'm currently a postdoc at <a href="http://hms.harvard.edu"
 			>Harvard Medical School</a
@@ -27,17 +34,22 @@
 	</p>
 
 	<p>
-		I work in data visualization research, specializing on biological data.
-		At HIDIVE, I develop tools for visualization of 3D chromatin structure
-		predictions as a complement for the typical chromosome conformation
-		capture techniques used for determining spatial organization of genomes.
+		My research work centers around data visualization, with a special focus
+		on data with spatial components. I work at the intersection of
+		disciplines, bridging software development, computer graphics, and
+		biology. I'm especially interested in developing new interaction
+		techniques that make complex or unfamiliar type of data more intuitive
+		to grasp and explore.
 	</p>
 
 	<p>
-		Currently, I'm making a Javascript <a
+		At HIDIVE, I investigate visualization of 3D chromatin structure
+		predictions as a complement for the typical chromosome conformation
+		capture techniques used for determining spatial organization of genomes.
+		This involves developing <a
 			href="https://observablehq.com/@david-kouril/chromospace-playground"
-			>library for 3D chromatin visualization</a
-		>. We're also preparing a widget version intended for use in
+			>new web-based visualization software</a
+		>, as well as an interface for
 		<a href="https://github.com/dvdkouril/chromospyce"
 			>computational notebooks</a
 		>.
@@ -86,7 +98,8 @@
 	}
 
 	#container {
-		width: 440px;
+		width: 100%;
+		max-width: 440px;
 		text-align: justify;
 		line-height: 1.3;
 		font-size: 110%;
@@ -143,5 +156,19 @@
 	.socials-logo:hover {
 		background-color: transparent;
 		text-decoration: none;
+		color: white;
+		font-size: 90%;
+		padding: 0px 5px 0px 5px;
+		margin-top: 5px;
+		text-decoration: none;
+	}
+	#job-search {
+		text-align: center;
+	}
+	#job-search p {
+		display: inline-block;
+		text-align: center;
+		border: 2px solid black;
+		padding: 10px 8px 10px 8px;
 	}
 </style>
