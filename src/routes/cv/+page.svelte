@@ -333,4 +333,8 @@
 	.basic-list li {
 		margin: 10px 0 10px 0;
 	}
+
+	mark {
+		background-color: #e0e7ff;
+	}
 </style>
