@@ -3,7 +3,9 @@
 	let { children } = $props();
 
 	const pageUrl = $derived(page.url.pathname);
-	const showHeader = $derived(pageUrl === "/" || pageUrl === "/cv");
+	const showHeader = $derived(
+		pageUrl === "/" || pageUrl === "/cv" || pageUrl === "/work",
+	);
 	//const showHeaderFor = ["/", "cv"];
 </script>
 
@@ -23,14 +25,13 @@
 				</li>
 				<li>
 					>
+					<a href="/work">work.</a>
+				</li>
+				<li>
+					>
 					<a href="/cv">cv.</a>
 					<!--> <a href="/cv" class:selected={currentPath === "/cv"}>cv.</a>-->
 				</li>
-				<!--<li>
-				<a href="/projects" class:selected={currentPath === "/projects"}
-					>projects.</a
-				>
-			</li>-->
 			</ul>
 		</nav>
 	</div>
