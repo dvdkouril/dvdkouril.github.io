@@ -2,9 +2,9 @@
 	import { page } from "$app/state";
 	let { children } = $props();
 
+	const showHeaderFor = ["/", "/cv", "/work", "/thingsimade"];
 	const pageUrl = $derived(page.url.pathname);
-	const showHeader = $derived(pageUrl === "/" || pageUrl === "/cv");
-	//const showHeaderFor = ["/", "cv"];
+	const showHeader = $derived(showHeaderFor.some((v) => pageUrl === v));
 </script>
 
 {#if showHeader}
