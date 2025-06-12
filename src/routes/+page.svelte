@@ -5,11 +5,6 @@
 </script>
 
 <svelte:head>
-	<title>Hello world!</title>
-	<meta
-		name="description"
-		content="This is where the description goes for SEO"
-	/>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link
