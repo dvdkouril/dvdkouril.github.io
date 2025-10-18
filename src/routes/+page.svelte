@@ -5,8 +5,230 @@
 	import observableLogo from "$lib/logos/observable.svg";
 	import PublicationsGroup from "$lib/components/publicationsgroup.svelte";
 	import { pubs } from "$lib/data/publications";
+	import { onMount } from "svelte";
 
 	let selectedPubs = $derived(pubs.filter((p) => p.isSelected));
+
+	onMount(async () => {
+		await initWebGPU();
+	});
+
+	async function initWebGPU() {
+		const canvas = document.getElementById("webgpu-canvas");
+
+		// Check if WebGPU is supported
+		if (!navigator.gpu) {
+			console.error("WebGPU is not supported in this browser");
+			canvas.style.background = "white";
+			return;
+		}
+
+		// Get GPU adapter and device
+		const adapter = await navigator.gpu.requestAdapter();
+		if (!adapter) {
+			console.error("Failed to get GPU adapter");
+			return;
+		}
+
+		const device = await adapter.requestDevice();
+		const context = canvas.getContext("webgpu");
+
+		const presentationFormat = navigator.gpu.getPreferredCanvasFormat();
+		context.configure({
+			device,
+			format: presentationFormat,
+			alphaMode: "premultiplied",
+		});
+
+		// Create uniform buffer for resolution and time
+		const uniformBufferSize = 16; // vec2 resolution + float time + padding
+		const uniformBuffer = device.createBuffer({
+			size: uniformBufferSize,
+			usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST,
+		});
+
+		// Vertex shader - creates a fullscreen triangle
+		const vertexShaderCode = `
+        @vertex
+        fn main(@builtin(vertex_index) vertexIndex: u32) -> @builtin(position) vec4f {
+            var pos = array<vec2f, 3>(
+                vec2f(-1.0, -1.0),
+                vec2f(3.0, -1.0),
+                vec2f(-1.0, 3.0)
+            );
+            return vec4f(pos[vertexIndex], 0.0, 1.0);
+        }
+    `;
+
+		// Fragment shader - creates continuous gradient between multiple positions
+		const fragmentShaderCode = `
+        struct Uniforms {
+            resolution: vec2f,
+            time: f32,
+        }
+
+        @group(0) @binding(0) var<uniform> uniforms: Uniforms;
+
+        // Simple hash function for noise generation
+        fn hash(p: vec2f) -> f32 {
+            let p3 = fract(vec3f(p.x, p.y, p.x) * 0.13);
+            let dp = dot(vec3f(p3.x, p3.y, p3.z + p3.x), vec3f(p3.y + 33.33, p3.z + 33.33, p3.x + 33.33));
+            return fract((p3.x + p3.y) * dp);
+        }
+
+        @fragment
+        fn main(@builtin(position) coord: vec4f) -> @location(0) vec4f {
+            let t = uniforms.time;
+
+            // Define 4 gradient positions with soft animation
+            let pos1 = vec2f(0.2 + sin(t * 0.3) * 0.15, 0.3 + cos(t * 0.4) * 0.15);
+            let pos2 = vec2f(0.8 + sin(t * 0.4 + 1.5) * 0.15, 0.2 + cos(t * 0.3 + 1.5) * 0.15);
+            let pos3 = vec2f(0.7 + sin(t * 0.35 + 3.0) * 0.15, 0.8 + cos(t * 0.45 + 3.0) * 0.15);
+            let pos4 = vec2f(0.3 + sin(t * 0.45 + 4.5) * 0.15, 0.7 + cos(t * 0.35 + 4.5) * 0.15);
+
+            // Define colors for each position
+            let color1 = vec3f(0.4, 0.6, 0.95);   // Soft periwinkle blue
+            let color2 = vec3f(1.0, 1.0, 1.0);    // White
+            let color3 = vec3f(1.0, 1.0, 1.0);    // White
+            let color4 = vec3f(1.0, 1.0, 1.0);    // White
+
+            // Convert pixel position to normalized coordinates
+            let uv = coord.xy / uniforms.resolution;
+
+            // Calculate aspect ratio to maintain circular shape
+            let aspect = uniforms.resolution.x / uniforms.resolution.y;
+            let uvCorrected = vec2f(uv.x * aspect, uv.y);
+            let pos1Corrected = vec2f(pos1.x * aspect, pos1.y);
+
+            // Define radius for colored point (in normalized coordinates)
+            let colorRadius = 0.15; // Approximately 15% of screen
+            let gradientFalloff = 0.3; // How far the gradient extends
+
+            // Calculate distance to color point
+            let dist1 = length(uvCorrected - pos1Corrected);
+
+            // Calculate color based on distance from colored point
+            var finalColor = vec3f(1.0, 1.0, 1.0); // Default white
+
+            if (dist1 < colorRadius) {
+                // Inside radius - solid color
+                finalColor = color1;
+            } else if (dist1 < colorRadius + gradientFalloff) {
+                // Outside radius - gradient falloff to white with smooth easing
+                let t = (dist1 - colorRadius) / gradientFalloff;
+                // Use smoothstep for smoother transition (ease-in-out)
+                let gradientStrength = 1.0 - smoothstep(0.0, 1.0, t);
+                finalColor = mix(vec3f(1.0, 1.0, 1.0), color1, gradientStrength);
+            }
+
+            // Add dithering to reduce banding
+            let noise = hash(coord.xy) * 2.0 - 1.0; // Range -1 to 1
+            finalColor = finalColor + noise * 0.01; // Add subtle noise
+
+            return vec4f(finalColor, 1.0);
+        }
+    `;
+
+		const bindGroupLayout = device.createBindGroupLayout({
+			entries: [
+				{
+					binding: 0,
+					visibility: GPUShaderStage.FRAGMENT,
+					buffer: { type: "uniform" },
+				},
+			],
+		});
+
+		const bindGroup = device.createBindGroup({
+			layout: bindGroupLayout,
+			entries: [
+				{
+					binding: 0,
+					resource: { buffer: uniformBuffer },
+				},
+			],
+		});
+
+		const pipelineLayout = device.createPipelineLayout({
+			bindGroupLayouts: [bindGroupLayout],
+		});
+
+		const pipeline = device.createRenderPipeline({
+			layout: pipelineLayout,
+			vertex: {
+				module: device.createShaderModule({ code: vertexShaderCode }),
+				entryPoint: "main",
+			},
+			fragment: {
+				module: device.createShaderModule({ code: fragmentShaderCode }),
+				entryPoint: "main",
+				targets: [
+					{
+						format: presentationFormat,
+					},
+				],
+			},
+			primitive: {
+				topology: "triangle-list",
+			},
+		});
+
+		function resize() {
+			canvas.width = window.innerWidth * window.devicePixelRatio;
+			canvas.height = window.innerHeight * window.devicePixelRatio;
+			canvas.style.width = window.innerWidth + "px";
+			canvas.style.height = window.innerHeight + "px";
+		}
+
+		function render(time) {
+			// Update uniforms
+			const uniformData = new Float32Array([
+				canvas.width,
+				canvas.height,
+				time * 0.001, // Convert to seconds
+				0, // padding
+			]);
+			device.queue.writeBuffer(uniformBuffer, 0, uniformData);
+
+			const commandEncoder = device.createCommandEncoder();
+			const textureView = context.getCurrentTexture().createView();
+
+			const renderPassDescriptor = {
+				colorAttachments: [
+					{
+						view: textureView,
+						clearValue: { r: 0.0, g: 0.0, b: 0.0, a: 1.0 },
+						loadOp: "clear",
+						storeOp: "store",
+					},
+				],
+			};
+
+			const passEncoder =
+				commandEncoder.beginRenderPass(renderPassDescriptor);
+			passEncoder.setPipeline(pipeline);
+			passEncoder.setBindGroup(0, bindGroup);
+			passEncoder.draw(3);
+			passEncoder.end();
+
+			device.queue.submit([commandEncoder.finish()]);
+		}
+
+		// Animation loop
+		function animate(time) {
+			render(time);
+			requestAnimationFrame(animate);
+		}
+
+		// Handle window resize
+		resize();
+		window.addEventListener("resize", () => {
+			resize();
+		});
+
+		// Start animation loop
+		requestAnimationFrame(animate);
+	}
 </script>
 
 <svelte:head>
@@ -18,6 +240,7 @@
 	/>
 </svelte:head>
 
+<canvas id="webgpu-canvas"></canvas>
 <div id="container">
 	<p>
 		Hi, I'm Postdoctoral Research Fellow at <a href="http://hms.harvard.edu"
@@ -152,5 +375,14 @@
 		text-align: center;
 		border: 2px solid black;
 		padding: 10px 8px 10px 8px;
+	}
+
+	#webgpu-canvas {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
 	}
 </style>
