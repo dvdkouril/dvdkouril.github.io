@@ -1,7 +1,12 @@
 <script lang="ts">
+	import "../app.css";
 	import blueskyLogo from "$lib/logos/bluesky.svg";
 	import githubLogo from "$lib/logos/github.svg";
 	import observableLogo from "$lib/logos/observable.svg";
+	import PublicationsGroup from "$lib/components/publicationsgroup.svelte";
+	import { pubs } from "$lib/data/publications";
+
+	let selectedPubs = $derived(pubs.filter((p) => p.type === "preprint"));
 </script>
 
 <svelte:head>
@@ -14,13 +19,6 @@
 </svelte:head>
 
 <div id="container">
-	<div id="job-search">
-		<p>
-			I'm searching for my next research role: <br />
-			<a href="/cv">CV</a> <br />
-		</p>
-	</div>
-
 	<p>
 		Hi, I'm currently a postdoc at <a href="http://hms.harvard.edu"
 			>Harvard Medical School</a
@@ -72,19 +70,10 @@
 		<a href="https://maps.app.goo.gl/e4W2jxMeZuTjPTFW9">Brno</a> for several
 		years.
 	</p>
-	<div id="links">
-		<a class="socials-logo" href="https://bsky.app/profile/dvdkouril.xyz"
-			><img alt="bluesky logo" src={blueskyLogo} /></a
-		>
-		|
-		<a class="socials-logo" href="https://github.com/dvdkouril"
-			><img alt="github logo" src={githubLogo} /></a
-		>
-		|
-		<a class="socials-logo" href="https://observablehq.com/@david-kouril"
-			><img alt="observablehq logo" src={observableLogo} /></a
-		>
-	</div>
+
+	<h3>Selected publications.</h3>
+
+	<PublicationsGroup pubs={selectedPubs} />
 </div>
 
 <style>
@@ -94,7 +83,7 @@
 
 	#container {
 		width: 100%;
-		max-width: 440px;
+		max-width: 800px;
 		text-align: justify;
 		line-height: 1.3;
 		font-size: 110%;
