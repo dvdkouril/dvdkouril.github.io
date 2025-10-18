@@ -63,14 +63,6 @@
 		>.
 	</p>
 
-	<p>
-		I was born in <a href="https://maps.app.goo.gl/ctHG1FnMsnKei2FN7"
-			>Zlín, Czech Republic</a
-		>, and lived in
-		<a href="https://maps.app.goo.gl/e4W2jxMeZuTjPTFW9">Brno</a> for several
-		years.
-	</p>
-
 	<h3>Selected publications.</h3>
 
 	<PublicationsGroup pubs={selectedPubs} />
@@ -104,6 +96,12 @@
 	h2 > pre {
 		padding-top: 0;
 		margin-top: 0;
+	}
+
+	h3 {
+		margin-bottom: 0;
+		padding-bottom: 0;
+		font-size: 140%;
 	}
 
 	a {

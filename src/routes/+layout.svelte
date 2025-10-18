@@ -5,7 +5,7 @@
 	import observableLogo from "$lib/logos/observable.svg";
 	let { children } = $props();
 
-	const showHeaderFor = ["/", "/cv", "/work", "/thingsimade"];
+	const showHeaderFor = ["/", "/cv", "/work", "/thingsimade", "/about"];
 	const pageUrl = $derived(page.url.pathname);
 	const showHeader = $derived(showHeaderFor.some((v) => pageUrl === v));
 
@@ -64,6 +64,10 @@
 					>
 					<a href="/cv">cv.</a>
 					<!--> <a href="/cv" class:selected={currentPath === "/cv"}>cv.</a>-->
+				</li>
+				<li>
+					>
+					<a href="/about">about.</a>
 				</li>
 				<!--<li>
 				<a href="/projects" class:selected={currentPath === "/projects"}
