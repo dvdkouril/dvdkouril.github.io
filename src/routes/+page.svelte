@@ -81,7 +81,7 @@
             let t = uniforms.time;
 
             // Define 4 gradient positions with soft animation
-            let pos1 = vec2f(0.2 + sin(t * 0.3) * 0.15, 0.3 + cos(t * 0.4) * 0.15);
+            let pos1 = vec2f(0.75 + sin(t * 0.3) * 0.1, 0.75 + cos(t * 0.4) * 0.1);
             let pos2 = vec2f(0.8 + sin(t * 0.4 + 1.5) * 0.15, 0.2 + cos(t * 0.3 + 1.5) * 0.15);
             let pos3 = vec2f(0.7 + sin(t * 0.35 + 3.0) * 0.15, 0.8 + cos(t * 0.45 + 3.0) * 0.15);
             let pos4 = vec2f(0.3 + sin(t * 0.45 + 4.5) * 0.15, 0.7 + cos(t * 0.35 + 4.5) * 0.15);
