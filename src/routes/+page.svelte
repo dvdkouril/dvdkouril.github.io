@@ -6,7 +6,7 @@
 	import PublicationsGroup from "$lib/components/publicationsgroup.svelte";
 	import { pubs } from "$lib/data/publications";
 
-	let selectedPubs = $derived(pubs.filter((p) => p.type === "preprint"));
+	let selectedPubs = $derived(pubs.filter((p) => p.isSelected));
 </script>
 
 <svelte:head>
@@ -20,7 +20,7 @@
 
 <div id="container">
 	<p>
-		Hi, I'm currently a postdoc at <a href="http://hms.harvard.edu"
+		Hi, I'm Postdoctoral Research Fellow at <a href="http://hms.harvard.edu"
 			>Harvard Medical School</a
 		>
 		in Nils Gehlenborg's <a href="http://hidivelab.org">HIDIVE Lab</a>.

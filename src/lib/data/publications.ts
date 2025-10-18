@@ -4,6 +4,7 @@ export type Publication = {
 	journal: string;
 	authors: string[];
 	year: number;
+	isSelected: boolean;
 };
 
 export const pubs: Publication[] = [
@@ -22,6 +23,7 @@ export const pubs: Publication[] = [
 		],
 		year: 2018,
 		journal: "IEEE Transactions on Visualization and Computer Graphics",
+		isSelected: false,
 	},
 	{
 		title: "Semantic Screen-Space Occlusion for Multiscale Molecular Visualization",
@@ -36,6 +38,7 @@ export const pubs: Publication[] = [
 		year: 2018,
 		journal:
 			"Eurographics Workshop on Visual Computing for Biology and Medicine",
+		isSelected: false,
 	},
 	{
 		title: "Labels on Levels: Labeling of Multi-Scale Multi-Instance and Crowded 3D Biological Environments",
@@ -53,6 +56,7 @@ export const pubs: Publication[] = [
 		],
 		year: 2019,
 		journal: "IEEE Transactions on Visualization and Computer Graphics",
+		isSelected: true,
 	},
 	{
 		title: "Multiscale Molecular Visualization",
@@ -70,6 +74,7 @@ export const pubs: Publication[] = [
 		],
 		year: 2019,
 		journal: "Journal of Molecular Biology",
+		isSelected: false,
 	},
 	{
 		title: "ScaleTrotter: Illustrative Visual Travels Across Negative Scales",
@@ -84,6 +89,7 @@ export const pubs: Publication[] = [
 		],
 		year: 2020,
 		journal: "IEEE Transactions on Visualization and Computer Graphics",
+		isSelected: false,
 	},
 	{
 		title: "HyperLabels: Browsing of Dense and Hierarchical Molecular 3D Models",
@@ -98,6 +104,7 @@ export const pubs: Publication[] = [
 		],
 		year: 2021,
 		journal: "IEEE Transactions on Visualization and Computer Graphics",
+		isSelected: true,
 	},
 	{
 		title: "Multiscale Unfolding: Illustratively Visualizing the Whole Genome at a Glance",
@@ -112,6 +119,7 @@ export const pubs: Publication[] = [
 		],
 		year: 2022,
 		journal: "IEEE Transactions on Visualization and Computer Graphics",
+		isSelected: false,
 	},
 	{
 		title: "Visualization working group at TU Wien: Visible Facimus Quod Ceteri Non Possunt",
@@ -132,6 +140,7 @@ export const pubs: Publication[] = [
 		],
 		year: 2021,
 		journal: "Journal of Visual Informatics",
+		isSelected: false,
 	},
 	{
 		title: "Molecumentary: Adaptable Narrated Documentaries Using Molecular Visualization",
@@ -147,6 +156,7 @@ export const pubs: Publication[] = [
 		],
 		year: 2021,
 		journal: "IEEE Transactions on Visualization and Computer Graphics",
+		isSelected: true,
 	},
 	{
 		title: "Nanotilus: Generator of Immersive Guided-Tours in Crowded 3D Environment",
@@ -164,6 +174,7 @@ export const pubs: Publication[] = [
 		],
 		year: 2021,
 		journal: "IEEE Transactions on Visualization and Computer Graphics",
+		isSelected: false,
 	},
 	//~ post-doc
 	{
@@ -180,6 +191,7 @@ export const pubs: Publication[] = [
 		],
 		year: 2022,
 		journal: "arXiv",
+		isSelected: false,
 	},
 	{
 		title: "Virtual reality inspection of chromatin 3D and 2D data",
@@ -193,6 +205,7 @@ export const pubs: Publication[] = [
 		],
 		year: 2024,
 		journal: "Computers & Graphics",
+		isSelected: false,
 	},
 	{
 		title: "The challenge of chromatin model comparison and validation-a project from the first international 4D Nucleome Hackathon",
@@ -211,6 +224,7 @@ export const pubs: Publication[] = [
 		],
 		year: 2024,
 		journal: "bioRxiv",
+		isSelected: false,
 	},
 	{
 		title: "Visualization of 3D chromatin with chromospace",
@@ -218,12 +232,14 @@ export const pubs: Publication[] = [
 		authors: ["D. Kouřil", "T. Manz", "N. Gehlenborg"],
 		year: 2024,
 		journal: "Poster at 4DN Annual Meeting",
+		isSelected: false,
 	},
 	{
 		title: "Design Space and Declarative Grammar for 3D Genomic Data Visualization",
-		type: "preprint",
+		type: "peer-reviewed",
 		authors: ["D. Kouřil", "T. Manz", "S. L’Yi", "N. Gehlenborg"],
-		year: 2025,
-		journal: "OSF Preprints",
+		year: 2026,
+		journal: "IEEE Transactions on Visualization and Computer Graphics (To appear)",
+		isSelected: true,
 	},
 ];
