@@ -140,14 +140,12 @@
 	}
 	.socials-logo {
 		background-color: transparent;
+		text-decoration: none;
+		padding: 0px 5px 0px 5px;
 	}
 	.socials-logo:hover {
 		background-color: transparent;
 		text-decoration: none;
 		color: white;
-		font-size: 90%;
-		padding: 0px 5px 0px 5px;
-		margin-top: 5px;
-		text-decoration: none;
 	}
 </style>

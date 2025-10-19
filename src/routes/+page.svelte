@@ -174,10 +174,17 @@
 		});
 
 		function resize() {
+			const docHeight = Math.max(
+				document.body.scrollHeight,
+				document.body.offsetHeight,
+				document.documentElement.clientHeight,
+				document.documentElement.scrollHeight,
+				document.documentElement.offsetHeight
+			);
 			canvas.width = window.innerWidth * window.devicePixelRatio;
-			canvas.height = window.innerHeight * window.devicePixelRatio;
+			canvas.height = docHeight * window.devicePixelRatio;
 			canvas.style.width = window.innerWidth + "px";
-			canvas.style.height = window.innerHeight + "px";
+			canvas.style.height = docHeight + "px";
 		}
 
 		function render(time) {
@@ -296,6 +303,12 @@
 		font-family: "Dosis", sans-serif;
 	}
 
+	:global(html),
+	:global(body) {
+		overflow-x: hidden;
+		max-width: 100vw;
+	}
+
 	#container {
 		width: 100%;
 		max-width: 800px;
@@ -357,15 +370,15 @@
 	}
 	.socials-logo {
 		background-color: transparent;
+		font-size: 90%;
+		padding: 0px 5px 0px 5px;
+		margin-top: 5px;
+		text-decoration: none;
 	}
 	.socials-logo:hover {
 		background-color: transparent;
 		text-decoration: none;
 		color: white;
-		font-size: 90%;
-		padding: 0px 5px 0px 5px;
-		margin-top: 5px;
-		text-decoration: none;
 	}
 	#job-search {
 		text-align: center;
@@ -378,7 +391,7 @@
 	}
 
 	#webgpu-canvas {
-		position: fixed;
+		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
