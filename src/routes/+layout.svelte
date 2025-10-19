@@ -1,8 +1,12 @@
 <script lang="ts">
 	import { page } from "$app/state";
+	import blueskyLogo from "$lib/logos/bluesky.svg";
+	import githubLogo from "$lib/logos/github.svg";
+	import observableLogo from "$lib/logos/observable.svg";
+	import scholarLogo from "$lib/logos/scholar.svg";
 	let { children } = $props();
 
-	const showHeaderFor = ["/", "/cv", "/work", "/thingsimade"];
+	const showHeaderFor = ["/", "/cv", "/work", "/thingsimade", "/about"];
 	const pageUrl = $derived(page.url.pathname);
 	const showHeader = $derived(showHeaderFor.some((v) => pageUrl === v));
 
@@ -30,8 +34,32 @@
 		<div id="name-title">
 			<h1>DAVID KOUŘIL.</h1>
 			<h2><pre>David Kou\v{"{"}r{"}"}il</pre></h2>
+
+			<div id="links">
+				<a
+					class="socials-logo"
+					href="https://bsky.app/profile/dvdkouril.xyz"
+					><img alt="bluesky logo" src={blueskyLogo} /></a
+				>
+				|
+				<a class="socials-logo" href="https://github.com/dvdkouril"
+					><img alt="github logo" src={githubLogo} /></a
+				>
+				|
+				<a
+					class="socials-logo"
+					href="https://scholar.google.com/citations?user=dZxZ__wAAAAJ&hl=en"
+					><img alt="google scholar logo" src={scholarLogo} /></a
+				>
+				|
+				<a
+					class="socials-logo"
+					href="https://observablehq.com/@david-kouril"
+					><img alt="observablehq logo" src={observableLogo} /></a
+				>
+			</div>
 		</div>
-		<div style="width: 2px; height: 80px; background-color: #000;"></div>
+		<div style="width: 2px; height: 120px; background-color: #000;"></div>
 		<nav id="menu">
 			<ul>
 				<li>
@@ -44,6 +72,10 @@
 					<a href="/cv">cv.</a>
 					<!--> <a href="/cv" class:selected={currentPath === "/cv"}>cv.</a>-->
 				</li>
+				<!-- <li> -->
+				<!-- 	> -->
+				<!-- 	<a href="/about">about.</a> -->
+				<!-- </li> -->
 				<!--<li>
 				<a href="/projects" class:selected={currentPath === "/projects"}
 					>projects.</a
@@ -101,5 +133,26 @@
 		/*background-color: #aaaaaa;*/
 		/*color: black;*/
 		/*text-decoration: none;*/
+	}
+	#links {
+		/* text-align: center; */
+		display: flex;
+		align-items: center;
+		/* justify-content: center; */
+		gap: 5px;
+		margin-top: 10px;
+	}
+	.socials-logo img {
+		height: 25px;
+	}
+	.socials-logo {
+		background-color: transparent;
+		text-decoration: none;
+		padding: 0px 5px 0px 5px;
+	}
+	.socials-logo:hover {
+		background-color: transparent;
+		text-decoration: none;
+		color: white;
 	}
 </style>
