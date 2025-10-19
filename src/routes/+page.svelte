@@ -268,11 +268,10 @@
 		At HIDIVE, I investigate visualization of 3D chromatin structure
 		predictions as a complement for the typical chromosome conformation
 		capture techniques used for determining spatial organization of genomes.
-		This involves developing <a
-			href="https://observablehq.com/@david-kouril/chromospace-playground"
+		This involves developing <a href="https://github.com/hms-dbmi/uchimata"
 			>new web-based visualization software</a
 		>, as well as an interface for
-		<a href="https://github.com/dvdkouril/chromospyce"
+		<a href="https://github.com/hms-dbmi/uchimata-py"
 			>computational notebooks</a
 		>.
 	</p>
