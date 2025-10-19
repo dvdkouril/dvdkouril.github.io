@@ -3,6 +3,7 @@
 	import blueskyLogo from "$lib/logos/bluesky.svg";
 	import githubLogo from "$lib/logos/github.svg";
 	import observableLogo from "$lib/logos/observable.svg";
+	import scholarLogo from "$lib/logos/scholar.svg";
 	let { children } = $props();
 
 	const showHeaderFor = ["/", "/cv", "/work", "/thingsimade", "/about"];
@@ -47,6 +48,12 @@
 				|
 				<a
 					class="socials-logo"
+					href="https://scholar.google.com/citations?user=dZxZ__wAAAAJ&hl=en"
+					><img alt="google scholar logo" src={scholarLogo} /></a
+				>
+				|
+				<a
+					class="socials-logo"
 					href="https://observablehq.com/@david-kouril"
 					><img alt="observablehq logo" src={observableLogo} /></a
 				>
@@ -65,10 +72,10 @@
 					<a href="/cv">cv.</a>
 					<!--> <a href="/cv" class:selected={currentPath === "/cv"}>cv.</a>-->
 				</li>
-				<li>
-					>
-					<a href="/about">about.</a>
-				</li>
+				<!-- <li> -->
+				<!-- 	> -->
+				<!-- 	<a href="/about">about.</a> -->
+				<!-- </li> -->
 				<!--<li>
 				<a href="/projects" class:selected={currentPath === "/projects"}
 					>projects.</a

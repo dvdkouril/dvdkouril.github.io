@@ -179,7 +179,7 @@
 				document.body.offsetHeight,
 				document.documentElement.clientHeight,
 				document.documentElement.scrollHeight,
-				document.documentElement.offsetHeight
+				document.documentElement.offsetHeight,
 			);
 			canvas.width = window.innerWidth * window.devicePixelRatio;
 			canvas.height = docHeight * window.devicePixelRatio;
@@ -250,9 +250,8 @@
 <canvas id="webgpu-canvas"></canvas>
 <div id="container">
 	<p>
-		Hi, I'm Postdoctoral Research Fellow at <a href="http://hms.harvard.edu"
-			>Harvard Medical School</a
-		>
+		Hi, I'm <em>Postdoctoral Research Fellow</em> at
+		<a href="http://hms.harvard.edu">Harvard Medical School</a>
 		in Nils Gehlenborg's <a href="http://hidivelab.org">HIDIVE Lab</a>.
 	</p>
 
